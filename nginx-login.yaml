@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-login
+  namespace: ingress-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: login
+  template:
+    metadata:
+      labels:
+        app: login
+    spec:
+      volumes:
+        - name: nginx-config-volume
+          configMap:
+            name: nginx-config
+      containers:
+      - name: nginx
+        image: parkhyeonwoo/nginx-login:v1.0
+        ports:
+          - containerPort: 80
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 256Mi
+            
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-nginx-login
+  namespace: ingress-nginx
+spec:
+  selector:
+    app: login
+  type: NodePort
+  clusterIP: 10.100.100.102
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30200
