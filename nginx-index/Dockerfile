@@ -8,7 +8,7 @@ ENV TZ=Asia/Seoul
 COPY nginx.conf /etc/nginx/
 
 # Static files 복사
-#COPY dist /usr/share/nginx/html
+COPY dist /usr/share/nginx/html
 
 EXPOSE 80
 
