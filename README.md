@@ -105,9 +105,10 @@
 
 ## 🗂PAGE
 --PAGE
-![스크린샷_18-9-2024_14325_](https://github.com/user-attachments/assets/e4a32e40-8603-4926-94e9-e9a784b4c605)
 
 ![스크린샷_18-9-2024_143146_](https://github.com/user-attachments/assets/a1e330a7-1a17-4959-8c82-5d9cb770fbe0)
+
+![스크린샷_18-9-2024_14325_](https://github.com/user-attachments/assets/e4a32e40-8603-4926-94e9-e9a784b4c605)
 
 ![스크린샷_18-9-2024_143157_](https://github.com/user-attachments/assets/469ccecf-5259-41cb-81e6-0ad69810c71e)
 
